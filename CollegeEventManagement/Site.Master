@@ -1,0 +1,116 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true"
+    CodeBehind="Site.master.cs"
+    Inherits="CollegeEventManagement.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%: Page.Title %> | College Events</title>
+
+    <link href="<%= ResolveUrl("~/Content/Site.css") %>" rel="stylesheet" />
+
+</head>
+
+<body>
+
+<form id="form1" runat="server">
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="Home.aspx" class="logo">
+                <span class="logo-icon">CE</span>
+                <span>College Events</span>
+            </a>
+
+            <nav class="nav-links">
+
+                <a href="Home.aspx">Home</a>
+
+                <a href="Events.aspx">Events</a>
+
+                <a href="MyEvents.aspx">My Events</a>
+
+                <a href="About.aspx">About</a>
+
+                <a href="Login.aspx">Login</a>
+
+                <a href="Register.aspx" class="register-btn">
+                    Register
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- PAGE CONTENT -->
+
+    <main>
+
+        <asp:ContentPlaceHolder
+            ID="MainContent"
+            runat="server">
+        </asp:ContentPlaceHolder>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div>
+                <h3>College Events</h3>
+
+                <p>
+                    Your one place to discover and participate
+                    in college events.
+                </p>
+            </div>
+
+            <div class="footer-links">
+
+                <h4>Quick Links</h4>
+
+                <a href="Home.aspx">Home</a>
+                <a href="Events.aspx">Events</a>
+                <a href="About.aspx">About</a>
+
+            </div>
+
+            <div>
+
+                <h4>Contact</h4>
+
+                <p>collegeevents@gmail.com</p>
+                <p>+91 98765 43210</p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            © <%: DateTime.Now.Year %> College Event Management System
+
+        </div>
+
+    </footer>
+
+</form>
+
+</body>
+</html>
